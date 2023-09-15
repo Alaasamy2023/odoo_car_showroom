@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+<record model="ir.ui.view" id="iti_tree_view_type">
+<field name="name">tree type</field>
+<field name="model">car.type</field>
+<field name="arch" type="xml">
+<tree>
+<field name="name"/>
+<field name="state"/>
+</tree>
+</field>
+</record>
+
+
+    <record id="action_type" model="ir.actions.act_window">
+<field name="name">type</field>
+<field name="res_model">car.type</field>
+<!-- <field name="view_mode">tree,form</field> -->
+<!-- <field name="context">{}</field> -->
+<!-- <field name="help" type="html"> -->
+<!-- <p class="o_view_nocontent_smiling_face"> Create your first patient! </p> -->
+<!-- </field> -->
+</record>
+
+
+
+
+
+
+<menuitem id="car_type_menu" name="type" parent="car_root" action="action_type"/>
+</odoo>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+
+
+
+   <record model="ir.ui.view" id="model_form_view">
+<field name="name">form model</field>
+<field name="model">car.model</field>
+<field name="arch" type="xml">
+<form>
+    <group>
+
+  <field name="name"/>
+<field name="state"/>
+    <field name="engine_type"/>
+
+    </group>
+<group>
+       <field name="transmission_type"/>
+<field name="technology"/>
+    <field name="brand_id"/>
+    <field name="type_id"/>
+
+</group>
+
+
+</form>
+</field>
+</record>
+
+
+
+
+
+
+
+
+
+
+
+
+<record model="ir.ui.view" id="model_tree_view">
+<field name="name">tree model</field>
+<field name="model">car.model</field>
+<field name="arch" type="xml">
+<tree>
+<field name="name"/>
+
+        <field name="brand_id"/>
+        <field name="type_id"/>
+
+
+<field name="state"/>
+    <field name="engine_type"/>
+    <field name="transmission_type"/>
+<field name="technology"/>
+
+
+</tree>
+</field>
+</record>
+
+
+    <record id="action_model" model="ir.actions.act_window">
+<field name="name">model</field>
+<field name="res_model">car.model</field>
+<!-- <field name="view_mode">tree,form</field> -->
+<!-- <field name="context">{}</field> -->
+<!-- <field name="help" type="html"> -->
+<!-- <p class="o_view_nocontent_smiling_face"> Create your first patient! </p> -->
+<!-- </field> -->
+</record>
+
+
+
+
+
+
+<menuitem id="car_model_menu" name="model" parent="car_root" action="action_model"/>
+</odoo>
